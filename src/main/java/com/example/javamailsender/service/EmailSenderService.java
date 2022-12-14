@@ -1,5 +1,8 @@
 package com.example.javamailsender.service;
 
+import com.example.javamailsender.pojo.MailDto;
+import org.springframework.http.ResponseEntity;
+
 public interface EmailSenderService {
-    void sendEmail(String to, String subject, String message);
+    ResponseEntity<String> sendEmail(MailDto mailDto);
 }
